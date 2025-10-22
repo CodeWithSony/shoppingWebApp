@@ -2,12 +2,13 @@ import React from "react";
 import { Title } from "./ui/text";
 import Link from "next/link";
 import Image from "next/image";
+import { banner } from "@/images";
 
 const HomeBanner = () => {
   return (
-    <div className=" bg-shop-light-pink justify-between py-16 md:py-0 px-10 lg:px-24 rounded-lg flex items-center">
-      <div>
-        <Title>
+    <div className=" bg-shop-light-pink justify-between py-16  px-10 lg:px-24 rounded-lg flex items-center">
+      <div className="space-y-5">
+        <Title className="mb-5">
           Grab Upto 50% Off On Selected <br /> Items.
         </Title>
         <Link
@@ -19,9 +20,7 @@ const HomeBanner = () => {
       </div>
       <div>
         <Image
-          src={
-            "https://images.unsplash.com/photo-1610737241336-371badac3b66?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVhZHBob25lJTIwd2VhcmluZyUyMGdpcmx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=400"
-          }
+          src={banner}
           alt="banner-1"
           className="md:inline-flex hidden "
           width={96}

@@ -27,7 +27,7 @@ export default function RootLayout({
         <body className="font-poppins antialiased">
           <div className="flex flex-col">
             <Header></Header>
-            <main className="flex-1">{children}</main>
+            <main>{children}</main>
             <Footer></Footer>
           </div>
         </body>

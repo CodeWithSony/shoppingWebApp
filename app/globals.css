@@ -4,12 +4,12 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-poppins: 'Poppins', sans-serif;
+  --font-poppins: "Poppins", sans-serif;
   --color-shop-light-pink: #fcf0e4;
   --color-shop-dark-green: #063c28;
   --color-shop-btn-dark-green: #063d29;
   --color-shop-light-bg: #f6f6f6;
-  --color-shop-light-green: #3b9c3c;
+  --color-shop-light-green: #3b9c3c; 
   --color-shop-orange: #fb6c08;
   --color-lightColor: #52525b;
   --color-darkColor: #151515;
@@ -57,6 +57,8 @@
 }
 
 :root {
+    --font-poppins: "Poppins", sans-serif;
+
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
