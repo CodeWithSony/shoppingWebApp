@@ -7,6 +7,7 @@ const Home = () => {
   return (
     <Container className=" bg-shop-light-pink ">
       <HomeBanner></HomeBanner>
+
       {/* <Button size='lg'>Check out</Button> */}
       {/* size="lg" ghost */}
 

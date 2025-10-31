@@ -4,8 +4,10 @@ import FooterTop from "./FooterTop";
 import Logo from "./Logo";
 import SocialMedia from "./SocialMedia";
 import { SubText, SubTitle } from "./ui/text";
-import { quickLinksData } from "@/constants/data";
+import { quickLinksData, categoriesData } from "@/constants/data";
 import Link from "next/link";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
 
 const Footer = () => {
   return (
@@ -30,13 +32,56 @@ const Footer = () => {
             <ul className="space-y-4 mt-4">
               {quickLinksData.map((item) => (
                 <li key={item.title}>
-                  <Link href={item?.href}>{item?.title}</Link>
+                  <Link
+                    href={item?.href}
+                    className="font-medium hover:shop-light-green hoverEffect"
+                  >
+                    {item?.title}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
-          <div></div>
-          <div></div>
+
+          <div>
+            <SubTitle className="">Categories</SubTitle>
+            <ul className="space-y-4 mt-4">
+              {categoriesData.map((item) => (
+                <li key={item.title}>
+                  <Link
+                    href={`/category/${item?.href}`}
+                    className="font-medium hover:shop-light-green hoverEffect"
+                  >
+                    {item?.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <SubTitle className="">News Letter</SubTitle>
+            <SubText className="">
+              Subscribe our news letter to receive updates and exclusive offers
+            </SubText>
+            <form action="" className="space-y-2">
+              <Input
+                className=""
+                placeholder="Enter your email"
+                type="email"
+                required
+              />
+              <Button className="w-full">Subscribe</Button>
+            </form>
+          </div>
+        </div>
+
+        <div className="py-6 border-t text-center text-sm text-gray-600">
+          <div>
+            new Date().getFullYear(){""}
+            <Logo className="text-sm" />
+            All rights reserved.
+          </div>
         </div>
       </Container>
     </footer>
